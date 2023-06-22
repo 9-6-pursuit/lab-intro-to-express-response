@@ -2,7 +2,7 @@
   "name": "lab-intro-to-express-response",
   "version": "1.0.0",
   "description": "Pursuit 9_6 express intro lab",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "jest"
   },
