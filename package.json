@@ -1,0 +1,27 @@
+{
+  "name": "lab-intro-to-express-response",
+  "version": "1.0.0",
+  "description": "Lab-intro-to-express-response",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pulse99r/lab-intro-to-express-response.git"
+  },
+  "keywords": [
+    "intro",
+    "express",
+    "response"
+  ],
+  "author": "Raymond Johnson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pulse99r/lab-intro-to-express-response/issues"
+  },
+  "homepage": "https://github.com/pulse99r/lab-intro-to-express-response#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
