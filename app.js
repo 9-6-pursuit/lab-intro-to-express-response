@@ -3,12 +3,16 @@ const express = require("express");
 
 //CONFIGURATION
 const app = express();
-const PORT = 3003;
+// const PORT = 3003;
 
 //ROUTES
-app.get("/", (request, response) => {
-  response.send("<h1>Greetings World</h1>");
-});
+// app.get("/", (request, response) => {
+//   response.send("<h1>Greetings World</h1>");
+// });
+app.get('/', (request, response) => {
+    response.status(200).send('Hello, world!')
+})
+
 app.get("/terminator", (request, response) => {
   response.send("<h1>I'll be back...</h1>");
 });
@@ -63,7 +67,7 @@ const magic8Responses = [
 ];
 
 app.get("/magic8", (request, response) => {
-    //ASSIGN a random number between 0 and the length of the magic8Responses array (exclusive) TO A VARIABLE
+  //ASSIGN a random number between 0 and the length of the magic8Responses array (exclusive) TO A VARIABLE
   const randomIndex = Math.floor(Math.random() * magic8Responses.length);
   //Retrieve the element from the magic8Responses array using RANDOMindex
   const randomResponse = magic8Responses[randomIndex];
@@ -72,6 +76,8 @@ app.get("/magic8", (request, response) => {
 });
 
 //LISTEN
-console.log(`Listening on port ${PORT}`);
+// console.log(`Listening on port ${PORT}`);
+// app.listen(PORT);
 
-app.listen(3003);
+// EXPORT
+module.exports = app;
