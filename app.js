@@ -8,7 +8,7 @@ const PORT = 3003
 
 //Routes
 app.get("/", (request, response)=> {
-    response.send("Hello, try folllowing routes: <br> /terminator <br> /timgunn ")
+    response.send("Hello, try folllowing routes: <br> /terminator <br> /timgunn <br>/Emeril <br>/SteveMcGarrett <br>/CoachTaylor <br>...etc <br> /magic8 ")
 })
 
 
@@ -89,3 +89,32 @@ let catchPhrases = [
     }
 
     
+    const magic8Responses = [
+        "It is certain",
+        "It is decidedly so",
+        "Without a doubt",
+        "Yes - Definitely",
+        "You may rely on it",
+        "As I see it, yes",
+        "Most likely",
+        "Outlook good",
+        "Yes, and signs point to yes",
+        "Reply hazy, try again",
+        "Ask again later",
+        "Better not tell you now",
+        "Cannot predict now",
+        "Concentrate and ask again",
+        "Don't count on it",
+        "My reply is no",
+        "My sources say no",
+        "Outlook not so good",
+        "Very doubtful"
+      
+      ]
+      
+      
+      let randomPhrase = magic8Responses[Math.floor(Math.random()*magic8Responses.length)]
+
+      app.get("/magic8", (request, response)=>{
+        response.send(`<h2>${randomPhrase}</h2>`)
+      })
