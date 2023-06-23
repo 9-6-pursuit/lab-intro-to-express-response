@@ -1,0 +1,9 @@
+h1{
+    align-items: center;
+    justify-content: center;
+    color: rgb(32, 118, 205);
+}
+
+body{
+    background-color: blueviolet;
+}
