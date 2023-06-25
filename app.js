@@ -7,48 +7,48 @@ const PORT = process.env.PORT || 3003;
 const app = express()
 //home
 app.get("/", (request, response) => {
-    response.status(200).send('Hello, world!');
+    response.status(200).send("<h1>Hello, world!</h1>");
 })
 
 //route that says "I'll be back"
 app.get("/terminator", (request, response) => {
-    response.send("I'll be back")
+    response.send("<h1>I'll be back</h1>")
 })
 
 app.get("/terminator2", (request, response) => {
-    response.send("Hasta la vista, baby");
+    response.send("<h1>Hasta la vista, baby</h1>");
 })
 
 app.get("/batman", (request, response) => {
-    response.send("To the Batmobile");
+    response.send("<h1>To the Batmobile</h1>");
 })
 
 app.get("/emeril", (request, response) => {
-    response.send("Bam");
+    response.send("<h1>Bam</h1>");
 })
 
 app.get("/bruce-banner", (request, response) => {
-    response.send("Don't make me angry");
+    response.send("<h1>Don't make me angry</h1>");
 })
 
 app.get("/jj-evans", (request, response) => {
-    response.send("Dy-no-myte!");
+    response.send("<h1>Dy-no-myte!</h1>");
 })
 
 app.get("/borg", (request, response) => {
-    response.send("Resistance is futile");
+    response.send("<h1>Resistance is futile</h1>");
 })
 
 app.get("/JamesBond", (request, response) => {
-    response.send("the name is Bond, James Bond");
+    response.send("<h1>the name is Bond, James Bond</h1>");
 })
 
 app.get("/frankenstein", (request, response) => {
-    response.send("It's alive! It's alive");
+    response.send("<h1>It's alive! It's alive</h1>");
 })
 
 app.get("/homer-simpson", (request, response) => {
-    response.send("D'Oh");
+    response.send("<h1>D'Oh</h1>");
 })
  app.get("/magic8", (request, response) => {
     const magic8Responses = [
