@@ -3,14 +3,16 @@ const express = require("express");
 
 //CONFIGURATION
 const app = express();
+// const PORT = 3003 (moved to server.js)
+
 
 // ROUTES
 app.get("/", (request, response) => {
-  response.send("<a href=/home >Go To Home</a>");
+  response.status(200).send("<a href=/home >Go To Home</a>");
 });
 
 app.get("/home", (request, response) => {
-  response.send("<h1>Welcome To Home</h1>");
+  response.send("<h1>Welcome To My Express Lab</h1>");
 });
 
 app.get("/terminator", (req, res) => {
@@ -87,10 +89,11 @@ app.get("/homer-simpson", (request, response) => {
   });
 
 
+  //LISTEN (moved to server.js)
+// app.listen(PORT, () => {
+//   console.log("Listening for requests on port ${PORT}");
+// });
 
-  
-  //LISTEN
-app.listen(3003, () => {
-  console.log("Listening for requests on port 3003");
-});
+//EXPORT
+module.exports = app
 
