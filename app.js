@@ -14,8 +14,8 @@ app.get("/home", (request, response) => {
 });
 
 app.get("/terminator", (req, res) => {
-    res.send("I'll be back")
-    res.send('Hasta la vista, baby')
+    res.send("<h1>I'll be back</h1>") //Using two will only show the first one and theres an error about headers can't have more than one per request.
+    // res.send('<h1>Hasta la vista, baby</h1>')
   })
 
 app.get("/homer-simpson", (request, response) => {
@@ -54,10 +54,41 @@ app.get("/homer-simpson", (request, response) => {
     response.send("<h1>Yo, Adrian</h1>");
   });
 
-  app.get("/magic8", (request, response) => {
-    response.send("<h1>Yo, Adrian</h1>");
+  const magic8Responses = [
+    "It is certain",
+    "It is decidedly so",
+    "Without a doubt",
+    "Yes - Definitely",
+    "You may rely on it",
+    "As I see it, yes",
+    "Most likely",
+    "Outlook good",
+    "Yes, and signs point to yes",
+    "Reply hazy, try again",
+    "Ask again later",
+    "Better not tell you now",
+    "Cannot predict now",
+    "Concentrate and ask again",
+    "Don't count on it",
+    "My reply is no",
+    "My sources say no",
+    "Outlook not so good",
+    "Very doubtful"
+  ];
+  
+  app.get('/magic8', (req, res) => {
+    // Generate a random index within the range of the array's length
+    const randomQuote = Math.floor(Math.random() * magic8Responses.length);
+  
+    // Retrieve the randomly selected response from the array
+    const magic8Answer = magic8Responses[randomQuote];
+  
+    res.send(`<h1>${magic8Answer}</h1>`);
   });
 
+
+
+  
   //LISTEN
 app.listen(3003, () => {
   console.log("Listening for requests on port 3003");
