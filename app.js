@@ -1,9 +1,10 @@
 const express = require("express");
 const app = express();
 
+// Routes for the combined application
 app.get("/", (request, response) => {
-    response.send("Hello, world!!!!!!!!");
-  });
+  response.send("Hello, world!!!!!!!!");
+});
 
 app.get("/Regis", (request, response) => {
   response.send("Is that your final answer");
@@ -14,7 +15,7 @@ app.get("/terminator", (request, response) => {
 });
 
 app.get("/Coach-Taylor", (request, response) => {
-  response.send("Coach Taylor - Clear eyes, full hearts, can't Lose");
+  response.send("Coach Taylor - Clear eyes, full hearts, can't lose");
 });
 
 app.get("/Batman", (request, response) => {
@@ -22,10 +23,10 @@ app.get("/Batman", (request, response) => {
 });
 
 app.get("/Homer-Simpson", (request, response) => {
-  response.send("D'Oh");
+  response.send("D'oh");
 });
 
-app.get("/JJ Evans", (request, response) => {
+app.get("/JJ-Evans", (request, response) => {
   response.send("Dy-no-myte!");
 });
 
@@ -38,19 +39,39 @@ app.get("/Gollum", (request, response) => {
 });
 
 app.get("/joanavel", (request, response) => {
-  response.send("no way jose!");
+  response.send("No way, José!");
 });
 
+const magic8Responses = [
+  "It is certain",
+  "It is decidedly so",
+  "Without a doubt",
+  "Yes - definitely",
+  "You may rely on it",
+  "As I see it, yes",
+  "Most likely",
+  "Outlook good",
+  "Yes, and signs point to yes",
+  "Reply hazy, try again",
+  "Ask again later",
+  "Better not tell you now",
+  "Cannot predict now",
+  "Concentrate and ask again",
+  "Don't count on it",
+  "My reply is no",
+  "My sources say no",
+  "Outlook not so good",
+  "Very doubtful"
+];
 
-// app.get('terminator', (req, res) => {
-//   res.send('I\ll be back')
-//   res.send('Hasta la vista, baby')
-// })
-
-app.listen(3003, () => {
-  console.log("I am listening for requests on port 3003!");
+app.get("/magic8", (request, response) => {
+  const randomIndex = Math.floor(Math.random() * magic8Responses.length);
+  const randomResponse = magic8Responses[randomIndex];
+  response.send(randomResponse);
 });
 
-
-
-// Coach Taylor - Clear eyes, full hearts, can't Lose
+// Starting the combined application on port 3003
+const port = 3003;
+app.listen(port, () => {
+  console.log(`Combined application is running on port ${port}`);
+});
