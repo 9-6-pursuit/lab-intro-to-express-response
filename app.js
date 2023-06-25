@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-// Routes for the combined application
+
 app.get("/", (request, response) => {
   response.send("Hello, world!!!!!!!!");
 });
@@ -70,8 +70,8 @@ app.get("/magic8", (request, response) => {
   response.send(randomResponse);
 });
 
-// Starting the combined application on port 3003
 const port = 3003;
 app.listen(port, () => {
   console.log(`Combined application is running on port ${port}`);
 });
+  
