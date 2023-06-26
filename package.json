@@ -1,0 +1,26 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "lab for express",
+  "main": "app.js",
+  "scripts": {
+    "test": "yes"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/p-mitchell1007/lab-intro-to-express-response.git"
+  },
+  "keywords": [
+    "git",
+    "repo"
+  ],
+  "author": "Phillip Mitchell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/p-mitchell1007/lab-intro-to-express-response/issues"
+  },
+  "homepage": "https://github.com/p-mitchell1007/lab-intro-to-express-response#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
