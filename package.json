@@ -1,0 +1,20 @@
+{
+  "name": "lab-intro-to-express-response",
+  "version": "1.0.0",
+  "description": "## Getting Started",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amshepard/lab-intro-to-express-response.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amshepard/lab-intro-to-express-response/issues"
+  },
+  "homepage": "https://github.com/amshepard/lab-intro-to-express-response#readme"
+}
